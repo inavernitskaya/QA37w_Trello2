@@ -22,7 +22,7 @@ public class ApplicationManager {
         wd.navigate().to("https://trello.com/");
 
         user = new UserHelper(wd);
-        user.login("inavernitskaya@gmail.com","Aa1234567!");
+        board= new BoardHelper(wd);
 
     }
 

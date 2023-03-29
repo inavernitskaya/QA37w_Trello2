@@ -10,7 +10,7 @@ public class BoardCreation extends TestBase{
     public void preCondition(){
         app.getUser().initLogin();
         app.getUser().pause(2000);
-        app.getUser().fillINLoginForm("inavernitskaya@gmail.com", "aA54321!");
+        app.getUser().fillINLoginForm("inavernitskaya@gmail.com", "Aa1234567!");
         app.getUser().submitLogin();
         app.getUser().pause(2000);
     }

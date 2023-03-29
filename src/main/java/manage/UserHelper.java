@@ -1,5 +1,6 @@
 package manage;
 
+import models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -19,6 +20,13 @@ public class UserHelper extends HelperBase{
         type(By.cssSelector("#password"), password);
     }
 
+    public void fillINLoginForm(User user) {
+        type(By.cssSelector("#user"),user.getEmail());
+        click(By.cssSelector("#login"));
+        pause(2000);
+        type(By.cssSelector("#password"),user.getPassword());
+    }
+
     public void submitLogin() {
         click(By.cssSelector("#login-submit"));
     }
@@ -32,14 +40,5 @@ public class UserHelper extends HelperBase{
         click(By.cssSelector("[data-testid='account-menu-logout']"));
         click(By.cssSelector("#logout-submit"));
     }
-
-    public void login(String email, String password) {
-        click(By.cssSelector("[href='/login']"));
-        type(By.cssSelector("#user"), email);
-        click(By.cssSelector("#login"));
-        pause(2000);
-        type(By.cssSelector("#password"), password);
-        click(By.cssSelector("#login-submit"));
-    }
-
 }
+
