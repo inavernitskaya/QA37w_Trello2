@@ -25,7 +25,7 @@ public class Login extends TestBase {
         // el1.click();
         //wd.findElement(By.cssSelector("[href='/login']")).click();
 
-        User user = new User().setEmail("inavernitskaya@gmail.com").setPassword("Aa1234567!");
+        User user = new User().setEmail("inavernitskaya@gmail.com").setPassword("aA54321!");
         app.getUser().initLogin();
         app.getUser().pause(2000);
         app.getUser().fillINLoginForm(user);
@@ -44,7 +44,7 @@ public class Login extends TestBase {
 
         app.getUser().initLogin();
         app.getUser().pause(2000);
-        app.getUser().fillINLoginForm("inavernitskaya@gmail.com","Aa1234567!");
+        app.getUser().fillINLoginForm("inavernitskaya@gmail.com","aA54321!");
         app.getUser().submitLogin();
         app.getUser().pause(2000);
 
